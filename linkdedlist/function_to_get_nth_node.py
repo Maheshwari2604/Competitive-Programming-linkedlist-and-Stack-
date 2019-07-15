@@ -29,6 +29,7 @@ class linkedlist:
 if __name__ == "__main__":
     llist = linkedlist()
     llist.push(2)
+    llist.push(9)
     llist.push(3)
     llist.push(4)
     llist.push(5)
