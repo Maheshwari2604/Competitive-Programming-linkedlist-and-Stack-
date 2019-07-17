@@ -20,7 +20,7 @@ class linkedlist:
 
         self.head = new_node
 
-    def inserafter(self, prev_node , new_data):
+    def inserafter(self, prev_node , new_node):
         if prev_node is None: 
             print("This node doesn't exist in DLL") 
             return
@@ -60,4 +60,6 @@ if __name__ == "__main__":
     llist.push(3)
     llist.push(4)
     llist.push(5)
+    llist.inserafter(3 , 6)
+    llist.append(8)
     
