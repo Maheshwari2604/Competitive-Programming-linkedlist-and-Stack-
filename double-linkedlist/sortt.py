@@ -22,7 +22,8 @@ class linkedlist:
     def sortt(self):
         temp = self.head
         temp1 = self.head
-        while(temp.data > temp1.next.data):
+        while(temp):
+            while(temp.data > temp1.next.data):
                 x = temp.data
                 print('here temp is')
                 print(x)
@@ -33,7 +34,8 @@ class linkedlist:
                 temp1.next.data = x
                 print('here temp1.next.data is')
                 print(temp.next.data)
-                temp1 = temp.next
+                temp1 = temp1.next
+            temp = temp.next
             
     def printlist(self):
         temp = self.head
