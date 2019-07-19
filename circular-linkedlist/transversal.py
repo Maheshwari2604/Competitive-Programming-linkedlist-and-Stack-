@@ -26,12 +26,22 @@ class linkedlist:
 
         self.head = new_node
 
-    # def printt(self):
-    #     temp = self.head
-    #     while(temp):
-    #         print(temp)
-    #         temp = temp.next
-
+        # ptr1 = Node(data) 
+        # temp = self.head 
+          
+        # ptr1.next = self.head 
+  
+        # # If linked list is not None then set the next of 
+        # # last node 
+        # if self.head is not None: 
+        #     while(temp.next != self.head): 
+        #         temp = temp.next 
+        #     temp.next = ptr1 
+  
+        # else: 
+        #     ptr1.next = ptr1 # For the first node 
+  
+        # self.head = ptr1        
         
 
     
