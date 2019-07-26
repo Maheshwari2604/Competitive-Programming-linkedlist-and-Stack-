@@ -17,10 +17,10 @@ class stack:
         self.postfix = []
 
     def push(self , i):
-        self.item.append(i)
+        self.item.insert(0,i)
 
     def isEmpty(self):
-        return self.item = []
+        return self.item == []
 
     def pop(self):
         self.item.pop()
@@ -36,20 +36,40 @@ class stack:
         print(tokenlist)
 
         for i in tokenlist:
+            #print(i)
             if i in "qwertyuiopasdfghjklzxcvbnm":
                 self.postfix.append(i)
+                print(self.postfix)
             elif i is '(':
-                self.push(i)
+                a = self.push(i)
+                print(a)
             elif i is ')':
                 toptoken = self.item.pop()
                 while toptoken!='(':
-                    self.postfix.append(i)
+                    b = self.postfix.append(i)
+                    print('b is: ')
+                    print(b)
                     toptoken = self.item.pop()
+                    print(toptoken)
 
-    
+            else:
+                while(not self.isEmpty() and (self.precedence[self.peek()] >= self.precedence[i])):
+                    c = self.postfix.append(self.item.pop())
+                    print('c is: ')
+                    print(c)
+                d = self.push(i)
+                e = self.item
+                print('d is: ' + str(d))
+                print(self.item)
+        
+        while not self.isEmpty():
+            self.postfix.append(self.item.pop())
+        #return ''.join(self.postfix)
+        print(''.join(self.postfix))
+        print(self.item)    
 
 if __name__ == "__main__":
-    exp = 
+    exp = ' a + b - c * g / h '
     s = stack()
     s.infixtopostfix(exp)
 
